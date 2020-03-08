@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Log-in </title>
+
+	<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type = "text/css" href = "Toolbar.css">
+
+	<style type="text/css">
+
+		body {
+			font-family: 'Oxanium';
+			margin: 0;
+			color: white;
+			background-image: url("assets/bg.jpg");
+			background-size: 150%;
+			background-attachment: fixed;
+			background-position: center;
+		}
+
+		#mainContainer {
+			text-align: center;
+			font-size: 125%;
+		}
+
+		#info {
+			background-color: #1a2023;
+			padding-top: 10%;
+			display: inline-block;
+			width: 40%;
+			min-height: 200%;
+		}
+
+		.classLink {
+			height: 100px;
+			width: 100px;
+		}
+
+		.guide {
+			height: 400px;
+			width: 190px;
+			padding: 10px;
+			margin: 10px;
+			text-align: center;
+			float: left;
+			background-image: linear-gradient(#5c6d73, #0b0e0f);
+			background-position: center;
+			border-style: solid;
+			border-color: #47747a;
+		}
+
+		#mainContainer img {
+			max-width:100%;
+			max-height:100%;
+		}
+
+		.author {
+			font-size: 75%;
+		}
+
+		.variableInfo {
+			font-size: 80%;
+		}
+
+		h2 {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+		}
+
+		h3 {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+		}
+
+		#newlogo {
+			width: 150px;
+			height: 125px;
+		}
+
+		#acc_login {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+			width: 50%;
+			display: inline-block;
+		}
+
+		form input {
+			margin: 5px;
+		}
+
+		#acc_login {
+			width: 100%;
+		}
+
+		#username {
+			font-family: 'Oxanium';
+			height: 31px;
+			width: 175px;
+		}
+
+		#password {
+			font-family: 'Oxanium';
+			height: 31px;
+			width: 175px;
+			margin-right: 1px;
+		}
+
+		#login {
+			font-family: 'Oxanium';
+			margin: 10px;
+			margin-bottom: 20px;
+		}
+
+		#login:hover {
+			color: cyan;
+			background-image: linear-gradient(#471a08, #a34722);
+			font-weight: bold; 
+			transition: .5s;
+			border-color: cyan;
+		}
+
+	</style>
+	
+</head>
+
+<body>
+
+	<header>
+
+		<input type = "checkbox" id = "nav-toggle" class = "nav-toggle">
+
+		<nav>
+
+			<h1 class="logo">
+				<img id = "newlogo" src = "assets/newlogo.png" id = "piclogo"> 
+			</h1>
+
+			<ul>
+				<li><a href="Homepage.html"> Home </a> </li>
+				<li><a> Classes </a>
+					<ul>
+						<li><a href = "scout.html">Scout</a></li>
+						<li><a href = "soldier.html">Soldier</a></li>
+						<li><a href = "pyro.html">Pyro</a></li>
+						<li><a href = "engineer.html">Engineer</a></li>
+						<li><a href = "heavy.html">Heavy</a></li>
+						<li><a href = "demoman.html">Demoman</a></li>
+						<li><a href = "sniper.html">Sniper</a></li>
+						<li><a href = "medic.html">Medic</a></li>
+						<li><a href = "spy.html">Spy</a></li>
+					</ul>
+				</li>
+				<li><a> Guides </a>
+					<ul>
+						<li><a href = "rocketguide.html">Basics to Rocket Jumping</a></li>
+						<li><a href = "mapguide.html">Learn your Maps</a></li>
+					</ul>
+				</li>
+				<li><a> Account </a>
+					<ul>
+						<li><a href = "login.html">Log-in</a></li>
+						<li><a href = "signup.html">Register</a></li>
+					</ul>
+				</li>
+		
+			</ul>
+			<div id = "search">
+					<input id = "searchbar" placeholder = "Looking for something?" type ="text">
+				</div>
+			<button id = "searchbutton"><img id = "searchicon" src = "assets/search.png"></button>
+		</nav>
+	</header>
+
+
+	<div id = "mainContainer">
+
+		<div id = "info">
+
+			<h3 id = "acc_login"> LOGIN </h3>
+
+			<form>
+				Username: <input id = "username" type="text"><br>
+				Password: <input id = "password" type="password"><br>
+				<button id = "login" type="submit" name="login">SUBMIT</button>
+			</form>
+
+		</div>
+	</div>
+
+</body>
+</html>

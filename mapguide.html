@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Map Guide </title>
+
+	<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type = "text/css" href = "Toolbar.css">
+	
+	<style type="text/css">
+
+		body {
+			font-family: 'Oxanium';
+			margin: 0;
+			color: white;
+			background-image: url("assets/bg.jpg");
+			background-size: 150%;
+			background-attachment: fixed;
+			background-position: center;
+		}
+
+		#mainContainer {
+			text-align: center;
+			font-size: 125%;
+		}
+
+		#info {
+			background-color: #1a2023;
+			padding-top: 10%;
+			display: inline-block;
+			width: 50%;
+			min-height: 200%;
+		}
+
+		.classLink {
+			height: 100px;
+			width: 100px;
+		}
+
+		.guide {
+			height: 400px;
+			width: 190px;
+			padding: 10px;
+			margin: 10px;
+			text-align: center;
+			float: left;
+			background-color: #3D3D3D;
+			background-position: center;
+			border-style: solid;
+			border-color: black;
+		}
+
+		#mainContainer img {
+			max-width:100%;
+			max-height:100%;
+		}
+
+		.author {
+			font-size: 75%;
+		}
+
+		.variableInfo {
+			font-size: 80%;
+		}
+
+		h2 {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+		}
+
+		h3 {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+		}
+
+		#guideicon {
+			height: 30px;
+			width: 30px;
+		}
+
+		#redbutton {
+			background-color: #B8383B;
+			border-color: white;
+			height: 30px;
+			width: 50px;
+		}
+
+		#blubutton {
+			background-color: #5885A2;
+			border-color: white;
+			height: 30px;
+			width: 50px;
+		}
+
+		#teams {
+			background-image: linear-gradient(#B8383B ,#5885A2);
+			border-bottom-style: solid;
+			border-bottom-color: white;
+		}
+
+		#hp {
+			color: gold;
+		}
+
+		#prime {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		#second {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		#mel {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		#slotname {
+			font-size: 25px;
+		}
+
+		#wepname {
+			font-size: 20px;
+		}
+
+		#wepstats {
+			font-size: 15px;
+		}
+
+		#crits {
+			font-size: 15px;
+			color: red;
+		}
+
+		footer {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+			position: absolute;
+			z-index: auto;
+			width: 100%;
+			display: inline-block;
+			
+		}
+
+		footer p{
+			font-size: 10px;
+			float: left;
+		}
+
+		#contributors {
+			color: gold;
+			margin-left: 340px;
+		}
+
+		#editicon {
+			float: right;
+			background-image: linear-gradient(#354147, black);
+			border-style: none;
+		}
+
+		#icon {
+			width: 30px;
+			height: 30px;
+			float: right;
+		}
+
+		#newlogo {
+			width: 150px;
+			height: 125px;
+		}
+
+		#comment {
+			font-family: 'Oxanium';
+			height: 31px;
+			width: 70%;
+		}
+
+		#addcomment {
+			font-family: 'Oxanium';
+			margin: 10px;
+			margin-bottom: 20px;
+		}
+
+		#addcomment:hover {
+			color: cyan;
+			background-image: linear-gradient(#471a08, #a34722);
+			font-weight: bold; 
+			transition: .5s;
+			border-color: cyan;
+		}
+
+		#headertext {
+			font-weight: bold;
+			color: orange;
+		}
+
+		#subhead {
+			font-weight: bold;
+			color: gold;
+			font-size: 17px;
+		}
+
+		#subtext {
+			font-weight: italic;
+			font-size: 15px;
+			color: white;
+		}
+
+		#guidepic {
+			height: 200px;
+			width: 200px;
+		}
+
+		#report {
+			width: 40px;
+			height: 30px;
+			align-self: left;
+			margin-left: 320px;
+		}
+
+		#repicon {
+			width: 40px;
+			height: 40px;
+		}
+
+		#report:hover {
+			width: 41px;
+			height: 31px;
+			border-style: cyan;
+			border-color: cyan;
+			background-image: linear-gradient(#471a08, #a34722);
+			transition: .5s;
+		}
+
+		#commend {
+			width: 40px;
+			height: 30px;
+			align-self: left;
+			margin-left: 0px;
+		}
+
+		#heart {
+			width: 40px;
+			height: 40px;
+		}
+
+		#commend:hover {
+			width: 41px;
+			height: 31px;
+			border-style: cyan;
+			border-color: cyan;
+			background-image: linear-gradient(#471a08, #a34722);
+			transition: .5s;
+		}
+
+	</style>
+	
+</head>
+
+<body>
+
+	<header>
+
+		<input type = "checkbox" id = "nav-toggle" class = "nav-toggle">
+
+		<nav>
+
+			<h1 class="logo">
+				<img id = "newlogo" src = "assets/newlogo.png" id = "piclogo"> 
+			</h1>
+
+			<ul>
+				<li><a href="Homepage.html"> Home </a> </li>
+				<li><a> Classes </a>
+					<ul>
+						<li><a href = "scout.html">Scout</a></li>
+						<li><a href = "soldier.html">Soldier</a></li>
+						<li><a href = "pyro.html">Pyro</a></li>
+						<li><a href = "engineer.html">Engineer</a></li>
+						<li><a href = "heavy.html">Heavy</a></li>
+						<li><a href = "demoman.html">Demoman</a></li>
+						<li><a href = "sniper.html">Sniper</a></li>
+						<li><a href = "medic.html">Medic</a></li>
+						<li><a href = "spy.html">Spy</a></li>
+					</ul>
+				</li>
+				<li><a> Guides </a>
+					<ul>
+						<li><a href = "rocketguide.html">Basics to Rocket Jumping</a></li>
+						<li><a href = "mapguide.html">Learn your Maps</a></li>
+					</ul>
+				</li>
+				<li><a> Account </a>
+					<ul>
+						<li><a href = "login.html">Log-in</a></li>
+						<li><a href = "signup.html">Register</a></li>
+					</ul>
+				</li>
+		
+			</ul>
+			<div id = "search">
+					<input id = "searchbar" placeholder = "Looking for something?" type ="text">
+				</div>
+			<button id = "searchbutton"><img id = "searchicon" src = "assets/search.png"></button>
+		</nav>
+	</header>
+
+	<div id = "mainContainer">
+
+		<div id = "info">
+
+			<div id = "guide_info">
+				<div id = "guidebar">
+					<h3>TF2 LAUNCH MAPS
+					<button id = "report"><img id = "repicon" src = "assets/reporticon.png"></button><button id = "commend"><img id = "heart" src = "assets/commendicon.png"></button></h3>
+				</div>
+				<img id = "example" src = "assets/mapoverhead.png" alt = "demo">
+				<p id = "headertext">THERE ARE MANY DIFFERENT MAPS IN TF2</p>
+				<pre id = "subtext">
+Each with their own unique format, however, what
+some of them might have in common with others is
+their map type. A map type is usually defined by
+its' prefix, for example: ctf_2fort is a CAPTURE
+THE FLAG(ctf) map, while cp_badlands is a CONTROL 
+POINT(cp) map. I will discuss a few that you may
+encounter in your first time playing the game.
+				</pre>
+				<hr>
+				<p id = "headertext">CAPTURE THE FLAG</p>
+				<img id = "example" src = "assets/2fort.png" alt = "demo">
+				<pre id = "subtext">
+A capture the flag map is essentially what it sounds
+like. You take the flag from the enemy base, bring it
+over to your base and earn a point. At the same time
+prevent enemies from taking your flag and doing the
+same. The usual win-score is 3 points for Valve-official 
+servers, however custom servers run by third parties may 
+have other scores set. A prime example is the fan-favorite
+2Fort. Overtime will commence once both teams have a tied
+score on time-end.
+				</pre>
+				<hr>
+				<p id = "headertext">CONTROL POINTS</p>
+				<pre id = "subtext">
+Control point maps have control points placed on designated
+spots. It is up to you, and your team to capture them all and
+take the win, whilst defending your own from incoming enemies.
+The two common styles of CP maps are Linear and Domination.
+				</pre>
+				<p id ="subhead">LINEAR</p>
+				<img id = "example" src = "assets/badlands.png" alt = "demo">
+				<pre id = "subtext">
+Linear style CP involves 5 control points, each team having
+two control points of their own and a central, neutral control
+point that either could capture. Once a point has been captured,
+the control point before it would be locked, and the proceeding
+point to be captured after it would then be unlocked. No more
+than two points can be unlocked at a time. The team who captures
+all five control points first wins. Once again, overtime will occur
+if both teams have an equal amount of points controlled at time-end.
+An example of a Linear CP map is cp_badlands.
+				</pre>
+				<p id ="subhead">DOMINATION</p>
+				<img id = "example" src = "assets/standin.jpg" alt = "demo">
+				<pre id = "subtext">
+Unlike Linear, the less common Domination CP involves three control
+points, however the twist is that ALL points are available for capture
+from the get go to any point in the match. Matches do NOT enter overtime
+in Domination mode, a team only wins once they capture all three points.
+An example of a Domination CP map is cp_standin_final.
+ 				</pre>
+				<hr>
+				<p id = "headertext">CUSTOM TF2 MAPS</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Y_jZno0UxE4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<pre id = "subtext">
+Not all maps are made by Valve developers alone... In fact, the vast
+majority of maps in TF2 are made by the community! The flashy, fun 
+maps that you normally do not encounter in a Valve server usually 
+have to be downloaded before you jump into a server and play.
+</pre>
+				<h3> COMMENTS </h3>
+				<input id = "comment" placeholder = "-Type your comment here-" type = "text"><br>
+				<button id = "addcomment" type="submit" name="add">COMMENT</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<footer>
+		<p>Guide contributed by: AplDGrape</p>
+		<p id = "contributors">Want to contribute? Click the icon at the bottom right!</p>
+		<button id = "editicon"><img id = "icon" src = "assets/logobackup.png"></button>
+	</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> The Spy </title>
+
+	<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type = "text/css" href = "Toolbar.css">
+	
+	<style type="text/css">
+
+		body {
+			font-family: 'Oxanium';
+			margin: 0;
+			color: white;
+			background-image: url("assets/bg.jpg");
+			background-size: 150%;
+			background-attachment: fixed;
+			background-position: center;
+		}
+
+		#mainContainer {
+			text-align: center;
+			font-size: 125%;
+		}
+
+		#info {
+			background-color: #1a2023;
+			padding-top: 10%;
+			display: inline-block;
+			width: 50%;
+			min-height: 200%;
+		}
+
+		.classLink {
+			height: 100px;
+			width: 100px;
+		}
+
+		.guide {
+			height: 400px;
+			width: 190px;
+			padding: 10px;
+			margin: 10px;
+			text-align: center;
+			float: left;
+			background-color: #3D3D3D;
+			background-position: center;
+			border-style: solid;
+			border-color: black;
+		}
+
+		#mainContainer img {
+			max-width:100%;
+			max-height:100%;
+		}
+
+		.author {
+			font-size: 75%;
+		}
+
+		.variableInfo {
+			font-size: 80%;
+		}
+
+		h2 {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+		}
+
+		h3 {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+		}
+
+		#classicon {
+			height: 30px;
+			width: 30px;
+		}
+
+		#redbutton {
+			background-color: #B8383B;
+			border-color: white;
+			height: 30px;
+			width: 50px;
+		}
+
+		#blubutton {
+			background-color: #5885A2;
+			border-color: white;
+			height: 30px;
+			width: 50px;
+		}
+
+		#teams {
+			background-image: linear-gradient(#B8383B ,#5885A2);
+			border-bottom-style: solid;
+			border-bottom-color: white;
+		}
+
+		#hp {
+			color: gold;
+		}
+
+		#prime {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		#second {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		#mel {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		#slotname {
+			font-size: 25px;
+		}
+
+		#wepname {
+			font-size: 20px;
+		}
+
+		#wepstats {
+			font-size: 15px;
+		}
+
+		#crits {
+			font-size: 15px;
+			color: red;
+		}
+
+		footer {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+			position: absolute;
+			z-index: auto;
+			width: 100%;
+			display: inline-block;
+			
+		}
+
+		footer p{
+			font-size: 10px;
+			float: left;
+		}
+
+		#contributors {
+			color: gold;
+			margin-left: 340px;
+		}
+
+		#editicon {
+			float: right;
+			background-image: linear-gradient(#354147, black);
+			border-style: none;
+		}
+
+		#icon {
+			width: 30px;
+			height: 30px;
+			float: right;
+		}
+
+		#pda {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		#newlogo {
+			width: 150px;
+			height: 125px;
+		}
+
+		#comment {
+			font-family: 'Oxanium';
+			height: 31px;
+			width: 70%;
+		}
+
+		#addcomment {
+			font-family: 'Oxanium';
+			margin: 10px;
+			margin-bottom: 20px;
+		}
+
+		#addcomment:hover {
+			color: cyan;
+			background-image: linear-gradient(#471a08, #a34722);
+			font-weight: bold; 
+			transition: .5s;
+			border-color: cyan;
+		}
+
+
+	</style>
+	
+</head>
+
+<body>
+
+	<header>
+
+		<input type = "checkbox" id = "nav-toggle" class = "nav-toggle">
+
+		<nav>
+
+			<h1 class="logo">
+				<img id = "newlogo" src = "assets/newlogo.png" id = "piclogo"> 
+			</h1>
+
+			<ul>
+				<li><a href="Homepage.html"> Home </a> </li>
+				<li><a> Classes </a>
+					<ul>
+						<li><a href = "scout.html">Scout</a></li>
+						<li><a href = "soldier.html">Soldier</a></li>
+						<li><a href = "pyro.html">Pyro</a></li>
+						<li><a href = "engineer.html">Engineer</a></li>
+						<li><a href = "heavy.html">Heavy</a></li>
+						<li><a href = "demoman.html">Demoman</a></li>
+						<li><a href = "sniper.html">Sniper</a></li>
+						<li><a href = "medic.html">Medic</a></li>
+						<li><a href = "spy.html">Spy</a></li>
+					</ul>
+				</li>
+				<li><a> Guides </a>
+					<ul>
+						<li><a href = "rocketguide.html">Basics to Rocket Jumping</a></li>
+						<li><a href = "mapguide.html">Learn your Maps</a></li>
+					</ul>
+				</li>
+				<li><a> Account </a>
+					<ul>
+						<li><a href = "login.html">Log-in</a></li>
+						<li><a href = "signup.html">Register</a></li>
+					</ul>
+				</li>
+		
+			</ul>
+			<div id = "search">
+					<input id = "searchbar" placeholder = "Looking for something?" type ="text">
+				</div>
+			<button id = "searchbutton"><img id = "searchicon" src = "assets/search.png"></button>
+		</nav>
+	</header>
+
+	<div id = "mainContainer">
+
+		<div id = "info">
+
+			<div id = "Class_info">
+				<h2> <img id = "classicon" src = "assets/spyicon.png" alt = "spyic"> THE SPY 
+				<img id = "classicon" src = "assets/spyicon.png" alt = "spyic"></h2>
+				<img src = "assets/spy.png" alt = "spyimg">
+				<br>
+				<p id = "teams">BASIC INFO</p>
+				<p>Team Uniforms</p>
+				<button onclick = "redspy()" id = "redbutton" type = "button">
+					<img src = "assets/teamred.png"></button>
+					<br>
+				<button onclick = "bluspy()" id = "blubutton" type = "button">
+					<img src = "assets/teamblue.png"></button>
+				<p>Emblems</p>
+				<img src = "assets/spyredemblem.png" alt = "spyredlogo">
+				<img src = "assets/spybluemblem.png" alt = "spyblulogo">
+				<p>Health Points: 125 
+					<p id = "hp"><img src = "assets/overheal.png"> 185 (w/ Overheal)</p>
+				</p>
+				<p>Speed: 107%</p>
+				<!-- add javascript to the buttons to display red and blu team models-->
+				<h3> ABOUT </h3>
+				<p>The Spy specializes in distrupting the enemy formation.<br>
+					Although he is not looked up upon for his lack of contribution<br>
+					in competitive play, a good Spy is a nightmare to play against<br>
+					especially for unexperienced Sniper and Engineers. His main form<br>
+					of attack is his knife. A backstab from his knife would instantly<br>
+					kill any unfortunate soul to be in front of him. He could easily<br>
+					run from any altercation by using both his disguise kit and invis<br>
+					watch. Despite this, a little burn from an enemy Pyro would render<br>
+					his invisibility and disguise useless, so time these right and get<br>
+					to stabbing!</p>
+				<h3> WEAPONS </h3>
+				<p id = "slotname">Primary Slot</p>
+					<img id = "prime" src = "assets/revolver.png" alt = "spyprim">
+					<p id = "wepname">Revolver (Stock)</p>
+					<p id = "wepstats">
+						Ammo Loaded: 6 Bullets<br>
+						Ammo Carried: 24 Bullets<br>
+						Base Damage: 40
+						<p id = "crits">Crit Damage: 120<p></p>
+					<hr>
+				<p id = "slotname">Melee Slot</p>
+					<img id = "mel" src = "assets/knife.png" alt = "spymel">
+					<p id = "wepname">Knife (Stock)</p>
+					<p id = "wepstats">
+						Base Damage: 40
+						<p id = "crits">Backstabs deal 6x the victim's health<p></p>
+					<hr>
+				<p id = "slotname">Special</p>
+					<img id = "pda" src = "assets/disguise.png" alt = "spyspec">
+					<p id = "wepname">Disguise Kit (Stock)</p>
+					<p id = "wepstats">
+						Allows the Spy to disguise himself as an enemy or ally.
+					</p>
+					<hr>
+					<img id = "pda" src = "assets/invis.png" alt = "spyspec2">
+					<p id = "wepname">Invis Watch (Stock)</p>
+					<p id = "wepstats">
+						Allows cloaking for 9 seconds.<br>
+						Cloak bar can be recharged over time or with ammo packs.
+					</p>
+					<hr>
+					<img id = "pda" src = "assets/sapper.png" alt = "spyspec3">
+					<p id = "wepname">Sapper (Stock)</p>
+					<p id = "wepstats">
+						Slowly destroys enemy Engineer buildings.
+					</p>
+					<h3> COMMENTS </h3>
+					<input id = "comment" placeholder = "-Type your comment here-" type = "text"><br>
+					<button id = "addcomment" type="submit" name="add">COMMENT</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<footer>
+		<p>Info. contributed by: juanchosoriano</p>
+		<p id = "contributors">Want to contribute? Click the icon at the bottom right!</p>
+		<button id = "editicon"><img id = "icon" src = "assets/logobackup.png"></button>
+	</footer>
+
+
+</body>
+</html>

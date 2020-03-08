@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> The Engineer </title>
+
+	<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type = "text/css" href = "Toolbar.css">
+	
+	<style type="text/css">
+
+		body {
+			font-family: 'Oxanium';
+			margin: 0;
+			color: white;
+			background-image: url("assets/bg.jpg");
+			background-size: 150%;
+			background-attachment: fixed;
+			background-position: center;
+		}
+
+		#mainContainer {
+			text-align: center;
+			font-size: 125%;
+		}
+
+		#info {
+			background-color: #1a2023;
+			padding-top: 10%;
+			display: inline-block;
+			width: 50%;
+			min-height: 200%;
+		}
+
+		.classLink {
+			height: 100px;
+			width: 100px;
+		}
+
+		.guide {
+			height: 400px;
+			width: 190px;
+			padding: 10px;
+			margin: 10px;
+			text-align: center;
+			float: left;
+			background-color: #3D3D3D;
+			background-position: center;
+			border-style: solid;
+			border-color: black;
+		}
+
+		#mainContainer img {
+			max-width:100%;
+			max-height:100%;
+		}
+
+		.author {
+			font-size: 75%;
+		}
+
+		.variableInfo {
+			font-size: 80%;
+		}
+
+		h2 {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+		}
+
+		h3 {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+		}
+
+		#classicon {
+			height: 30px;
+			width: 30px;
+		}
+
+		#redbutton {
+			background-color: #B8383B;
+			border-color: white;
+			height: 30px;
+			width: 50px;
+		}
+
+		#blubutton {
+			background-color: #5885A2;
+			border-color: white;
+			height: 30px;
+			width: 50px;
+		}
+
+		#teams {
+			background-image: linear-gradient(#B8383B ,#5885A2);
+			border-bottom-style: solid;
+			border-bottom-color: white;
+		}
+
+		#hp {
+			color: gold;
+		}
+
+		#prime {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		#second {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		#mel {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		#slotname {
+			font-size: 25px;
+		}
+
+		#wepname {
+			font-size: 20px;
+		}
+
+		#wepstats {
+			font-size: 15px;
+		}
+
+		#crits {
+			font-size: 15px;
+			color: red;
+		}
+
+		#pda {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		#build {
+			background-image: linear-gradient(#354147, black);
+			border-style: solid;
+			border-color: white;
+		}
+
+		footer {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+			position: absolute;
+			z-index: auto;
+			width: 100%;
+			display: inline-block;
+			
+		}
+
+		footer p{
+			font-size: 10px;
+			float: left;
+		}
+
+		#contributors {
+			color: gold;
+			margin-left: 340px;
+		}
+
+		#editicon {
+			float: right;
+			background-image: linear-gradient(#354147, black);
+			border-style: none;
+		}
+
+		#icon {
+			width: 30px;
+			height: 30px;
+			float: right;
+		}
+
+		#newlogo {
+			width: 150px;
+			height: 125px;
+		}
+
+		#comment {
+			font-family: 'Oxanium';
+			height: 31px;
+			width: 70%;
+		}
+
+		#addcomment {
+			font-family: 'Oxanium';
+			margin: 10px;
+			margin-bottom: 20px;
+		}
+
+		#addcomment:hover {
+			color: cyan;
+			background-image: linear-gradient(#471a08, #a34722);
+			font-weight: bold; 
+			transition: .5s;
+			border-color: cyan;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+
+	<header>
+
+		<input type = "checkbox" id = "nav-toggle" class = "nav-toggle">
+
+		<nav>
+
+			<h1 class="logo">
+				<img id = "newlogo" src = "assets/newlogo.png" id = "piclogo"> 
+			</h1>
+
+			<ul>
+				<li><a href="Homepage.html"> Home </a> </li>
+				<li><a> Classes </a>
+					<ul>
+						<li><a href = "scout.html">Scout</a></li>
+						<li><a href = "soldier.html">Soldier</a></li>
+						<li><a href = "pyro.html">Pyro</a></li>
+						<li><a href = "engineer.html">Engineer</a></li>
+						<li><a href = "heavy.html">Heavy</a></li>
+						<li><a href = "demoman.html">Demoman</a></li>
+						<li><a href = "sniper.html">Sniper</a></li>
+						<li><a href = "medic.html">Medic</a></li>
+						<li><a href = "spy.html">Spy</a></li>
+					</ul>
+				</li>
+				<li><a> Guides </a>
+					<ul>
+						<li><a href = "rocketguide.html">Basics to Rocket Jumping</a></li>
+						<li><a href = "mapguide.html">Learn your Maps</a></li>
+					</ul>
+				</li>
+				<li><a> Account </a>
+					<ul>
+						<li><a href = "login.html">Log-in</a></li>
+						<li><a href = "signup.html">Register</a></li>
+					</ul>
+				</li>
+		
+			</ul>
+			<div id = "search">
+					<input id = "searchbar" placeholder = "Looking for something?" type ="text">
+				</div>
+			<button id = "searchbutton"><img id = "searchicon" src = "assets/search.png"></button>
+		</nav>
+	</header>
+
+
+	<div id = "mainContainer">
+
+		<div id = "info">
+
+			<div id = "Class_info">
+				<h2> <img id = "classicon" src = "assets/engiicon.png" alt = "engiic"> THE ENGINEER 
+				<img id = "classicon" src = "assets/engiicon.png" alt = "engiic"></h2>
+				<img src = "assets/engineer.png" alt = "engiimg">
+				<br>
+				<p id = "teams">BASIC INFO</p>
+				<p>Team Uniforms</p>
+				<button onclick = "redengi()" id = "redbutton" type = "button">
+					<img src = "assets/teamred.png"></button>
+					<br>
+				<button onclick = "bluengi()" id = "blubutton" type = "button">
+					<img src = "assets/teamblue.png"></button>
+				<p>Emblems</p>
+				<img src = "assets/engiredemblem.png" alt = "engiredlogo">
+				<img src = "assets/engibluemblem.png" alt = "engiblulogo">
+				<p>Health Points: 125 
+					<p id = "hp"><img src = "assets/overheal.png"> 185 (w/ Overheal)</p>
+				</p>
+				<p>Speed: 100%</p>
+				<!-- add javascript to the buttons to display red and blu team models-->
+				<h3> ABOUT </h3>
+				<p>The Engineer is a defense class specializing in<br>
+					holding objectives. His trademark PDA allows him<br>
+					to create three types of buildings, including sentries:<br>
+					automated guns that shoot enemies on sight, dispensers:<br>
+					that provide allies with health and ammunition, and<br>
+					teleporters that allow for fast travel between two<br>
+					locations. Despite having all these at his disposal<br>
+					enemy Spies are able to fool his sentry gun with the<br>
+					use of their disguise kits, and can be able to render<br>
+					his buildings useless through his sappers. Always stay<br>
+					alert of your surroundings and get a Pyro to help defend<br>
+					your buildings!</p>
+				<h3> WEAPONS </h3>
+				<p id = "slotname">Primary Slot</p>
+					<img id = "prime" src = "assets/shotgun.png" alt = "engiprim">
+					<p id = "wepname">Shotgun (Stock)</p>
+					<p id = "wepstats">
+						Ammo Loaded: 6 Shells<br>
+						Ammo Carried: 32 Shells<br>
+						Base Damage: 60 (6 per-pellet)
+						<p id = "crits">Crit Damage: 180 (18 per-pellet)<p></p>
+					<hr>
+				<p id = "slotname">Secondary Slot</p>
+					<img id = "second" src = "assets/pistol.png" alt = "engisec">
+					<p id = "wepname">Pistol (Stock)</p>
+					<p id = "wepstats">
+						Ammo Loaded: 12 Bullets<br>
+						Ammo Carried: 36 Bullets<br>
+						Base Damage: 15
+						<p id = "crits">Crit Damage: 45<p></p>
+					<hr>
+				<p id = "slotname">Melee Slot</p>
+					<img id = "mel" src = "assets/wrench.png" alt = "engimel">
+					<p id = "wepname">Wrench (Stock)</p>
+					<p id = "wepstats">
+						Base Damage: 65
+						<p id = "crits">Crit Damage: 195<p></p>
+					<hr>
+				<p id = "slotname">Special</p>
+					<img id = "pda" src = "assets/pda.png" alt = "engispec">
+					<p id = "wepname">Construction PDA (Stock)</p>
+					<p id = "wepstats">
+						Allows the player to construct Sentries, Dispensers and Teleporters.
+					</p>
+
+					<img id = "pda" src = "assets/pdades.png" alt = "engispec2">
+					<p id = "wepname">Destruction PDA (Stock)</p>
+					<p id = "wepstats">
+						Allows the destruction of a player's own Sentries, Dispensers and Teleporters.
+					</p>
+				<h3>BUILDINGS</h3>
+				<p id = "slotname">Sentry</p>
+					<img id = "build" src = "assets/sentry.png" alt = "sentry">
+					<p id = "wepstats">
+						Per Level(1/2/3):<br>
+						Metal Cost: 130/330/530<br>
+						Health: 150/180/216<br>
+						Bullet Average DPS: 64/128/128<br>
+						Rocket Average DPS: None/None/100</p>
+					<hr>
+					<p id = "slotname">Dispenser</p>
+					<img id = "build" src = "assets/dispense.png" alt = "dispenser">
+					<p id = "wepstats">
+						Per Level(1/2/3):<br>
+						Metal Cost: 100/300/500<br>
+						Health: 150/180/216<br>
+						Bullet Regen: 10 per second/15 per second/ 20 per second<br>
+						Metal Regen: 40 per 5 seconds/50 per 5 seconds/60 per 5 seconds<br>
+						Ammo Regen: 20% per second/30% per second/40% per second</p>
+					<hr>
+					<p id = "slotname">Teleporter</p>
+					<img id = "build" src = "assets/tele.png" alt = "teleporter">
+					<p id = "wepstats">
+						Per Level(1/2/3):<br>
+						Metal Cost: 50/250/450<br>
+						Health: 150/180/216<br>
+						Recharge Time: 10 seconds/5 seconds/3 seconds</p>
+					<h3> COMMENTS </h3>
+					<input id = "comment" placeholder = "-Type your comment here-" type = "text"><br>
+					<button id = "addcomment" type="submit" name="add">COMMENT</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<footer>
+		<p>Info. contributed by: juanchosoriano</p>
+		<p id = "contributors">Want to contribute? Click the icon at the bottom right!</p>
+		<button id = "editicon"><img id = "icon" src = "assets/logobackup.png"></button>
+	</footer>
+
+
+</body>
+</html>

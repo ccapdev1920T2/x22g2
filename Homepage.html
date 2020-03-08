@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> TF2 Toolbox </title>
+
+	<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type = "text/css" href = "Toolbar.css">
+
+	<style type="text/css">
+
+		body {
+			font-family: 'Oxanium';
+			margin: 0;
+			color: white;
+			background-image: url("assets/bg.jpg");
+			background-size: 150%;
+			background-attachment: fixed;
+			background-position: center;
+		}
+
+		#mainContainer {
+			text-align: center;
+			font-size: 125%;
+		}
+
+		#info {
+			background-color: #1a2023;
+			padding-top: 10%;
+			display: inline-block;
+			width: 70%;
+			min-height: 200%;
+		}
+
+		.classLink {
+			height: 100px;
+			width: 100px;
+		}
+
+		.guide {
+			height: 400px;
+			width: 190px;
+			padding: 10px;
+			margin: 10px;
+			text-align: center;
+			float: left;
+			background-image: linear-gradient(#5c6d73, #0b0e0f);
+			background-position: center;
+			border-style: solid;
+			border-color: #47747a;
+		}
+
+		#mainContainer img {
+			max-width:100%;
+			max-height:100%;
+		}
+
+		.author {
+			font-size: 75%;
+		}
+
+		.variableInfo {
+			font-size: 80%;
+		}
+
+		h2 {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+		}
+
+		h3 {
+			background-image: linear-gradient(#354147, black);
+			border-bottom-style: solid;
+			border-bottom-color: #47747a;
+		}
+
+		#newlogo {
+			width: 150px;
+			height: 125px;
+		}
+
+		#rocketguide {
+			color: white;
+			text-decoration: none;
+		}
+
+		#mapguide {
+			color: white;
+			text-decoration: none;
+		}
+
+		#rocketguide:hover, #mapguide:hover {
+			color: cyan;
+			font-weight: bold; 
+			transition: .5s;
+		}
+
+		#face:hover{
+			width: 120px;
+			height: 120px;
+			border-style: solid;
+			border-color: cyan;
+		}
+
+	</style>
+	
+</head>
+
+<body>
+
+	<header>
+
+		<input type = "checkbox" id = "nav-toggle" class = "nav-toggle">
+
+		<nav>
+
+			<h1 class="logo">
+				<img id = "newlogo" src = "assets/newlogo.png" id = "piclogo"> 
+			</h1>
+
+			<ul>
+				<li><a href="Homepage.html"> Home </a> </li>
+				<li><a> Classes </a>
+					<ul>
+						<li><a href = "scout.html">Scout</a></li>
+						<li><a href = "soldier.html">Soldier</a></li>
+						<li><a href = "pyro.html">Pyro</a></li>
+						<li><a href = "engineer.html">Engineer</a></li>
+						<li><a href = "heavy.html">Heavy</a></li>
+						<li><a href = "demoman.html">Demoman</a></li>
+						<li><a href = "sniper.html">Sniper</a></li>
+						<li><a href = "medic.html">Medic</a></li>
+						<li><a href = "spy.html">Spy</a></li>
+					</ul>
+				</li>
+				<li><a> Guides </a>
+					<ul>
+						<li><a href = "rocketguide.html">Basics to Rocket Jumping</a></li>
+						<li><a href = "mapguide.html">Learn your Maps</a></li>
+					</ul>
+				</li>
+				<li><a> Account </a>
+					<ul>
+						<li><a href = "login.html">Log-in</a></li>
+						<li><a href = "signup.html">Register</a></li>
+					</ul>
+				</li>
+		
+			</ul>
+			<div id = "search">
+					<input id = "searchbar" placeholder = "Looking for something?" type ="text">
+				</div>
+			<button id = "searchbutton"><img id = "searchicon" src = "assets/search.png"></button>
+		</nav>
+	</header>
+
+
+	<div id = "mainContainer">
+
+		<div id = "info">
+
+			<div id = "Home_info">
+				<h2> ABOUT TF2 TOOLBOX </h2>
+
+				<p>TF2 Toolbox is a website dedicated to bringing you the<br>
+				up to date information on everything TF2! Feel free to provide<br>
+				your own knowledge or learn a thing or two from viewing<br>
+				our player guides!</p>
+			</div>
+
+			<div id = "Class selection">
+				<h2> CLASSES </h2>
+
+				<p class = "variableInfo"> 
+					There are 9 classes that you may play as,<br>
+					each with their own unique playstyles and
+					abilities.<br><br>
+					1. Offense Classes(Top Row) are fit for capturing objectives<br><br>
+					2. Defensive Classes(Second Row) specialize in holding objectives<br><br>
+					3. Support Classes(Bottom Row) provide help for their<br>
+					team in other ways(i.e. healing, sabotage, etc.)<br></p>
+
+				<div class="row">
+  					<div class="column">
+  						<a href = "scout.html"><img id = "face" src = "assets/1.jpg" width="100" height="100"></a>
+  						<a href = "soldier.html"><img id = "face" src = "assets/2.jpg" width="100" height="100"></a>
+  						<a href = "pyro.html"><img id = "face" src = "assets/3.jpg" width="100" height="100"></a>
+  					</div>
+
+  					<div class="column">
+  						<a href = "engineer.html"><img id = "face" src = "assets/4.jpg" width="100" height="100"></a>
+  						<a href = "heavy.html"><img id = "face" src = "assets/5.jpg" width="100" height="100"></a>
+  						<a href = "demoman.html"><img id = "face" src = "assets/6.jpg" width="100" height="100"></a>
+  					</div>
+
+  					<div class="column">
+  						<a href = "sniper.html"><img id = "face" src = "assets/7.jpg" width="100" height="100"></a>
+  						<a href = "medic.html"><img id = "face" src = "assets/8.jpg" width="100" height="100"></a>
+  						<a href = "spy.html"><img id = "face" src = "assets/9.jpg" width="100" height="100"></a>
+  					</div>
+				</div>
+			</div>
+
+			<div id = "Guide Selection">
+				<h2> GUIDES </h2>
+				<p class = "variableInfo"> 
+					Read through our user-contributed player guides to get
+					a hang of the game, learn something new or improve your<br>
+					skill! Feel like sharing your own strategies? Contribute
+					a player guide yourself, serve as a mentor to other<br>
+					less experienced players and lead your peers to victory!</p>
+
+				<h3> FEATURED </h3>
+
+				<div class = "Guideline">	
+					<a id = "rocketguide" href = "rocketguide.html">
+						<div class = "guide">
+							<p>Basics to Rocket Jumping</p>
+							<p class = "author"> by Theorhetically </p>
+							<img src = "assets/rocketjump.gif">
+
+							<p class = "variableInfo">Learn how to rocket jump as Soldier!</p>
+						</div>
+					</a>
+					<a id = "mapguide" href = "mapguide.html">
+						<div class = "guide">
+							<p>TF2 Maps for Beginners</p>
+							<p class = "author"> by AplDGrape </p>
+							<img src = "assets/mapgif.gif">
+
+							<p class = "variableInfo">Learn map rotations, objectives and key strategies per map type!</p>
+
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
