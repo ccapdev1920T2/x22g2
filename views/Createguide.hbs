@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<div id = "mainContainer">
+
+    <div id = "newguide">
+
+        <h3 id = "newguide_header"> POST A GUIDE </h3>
+
+        <form method = "POST" action = "/createguide" id = "guideform">
+
+            <label id = "label_gname" for = "guidetitle">Guide Title: </label>
+            <input id = "guidetitle" name = "guidetitle" type="text"><br>
+
+            <label id = "label_gname" for = "guidecategory">Category: </label>
+            <select id = "guidetitle" name = "guidecategory">
+                <option value = "combat"> Combat </option>
+                <option value = "menus"> Menu </option>
+                <option value = "general"> General </option>
+                <option value = "misc"> Miscellaneous </option>
+            </select><br>
+
+            <label id = "label_gname" for = "guidetagline">Tagline: </label>
+            <input id = "guidetitle" name = "guidetagline" type = "text"><br>
+
+            <label id = "label_guidetext" for = "guidetext">Contents: </label>
+            <textarea id = "guidetext" name = "guidetext" type="text"></textarea><br>
+
+            <button id = "create" type="submit" name="create">SUBMIT GUIDE</button>
+        </form>
+
+    </div>
+</div>

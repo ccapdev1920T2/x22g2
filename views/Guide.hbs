@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<div id = "mainContainer">
+	<div id = "info">
+		<div id = "guide_info">
+
+			<div id = "guidebar">
+				<h3 id = "guidename">{{guide.title}}</h3>
+                Commendations: {{guide.likes}}
+                <form method = "POST" action = "{{guide._id}}/like">
+				    <button id = "like">♥</button>
+                </form>
+			</div>
+            <p> written by <a href = "/user/{{authordetails._id}}">{{guide.author}}</a> </p>
+            <div id = "guidecontent">
+				<p id = "subtext">{{guide.content}}</p>
+				<hr>
+            </div>
+
+            {{#if seshdetails.admin}}
+                <a href = '{{guide._id}}/delete'> Delete this guide </a>
+            {{/if}}   
+		</div>
+		<div id = "comment_div">
+            <h2 id = "comment_header"> COMMENTS </h2>
+
+            {{#each guide.Comments}}
+                <div id = "user_comment">
+                    <p id = "username"> <a href = "/finduser/{{this.author}}">{{this.author}}</a>:</p><p id = "datetime">({{this.datePosted}})</p>
+                    <div id = "content">{{this.content}}</div>
+                </div>
+            {{/each}}
+
+            <form method = "POST" action = "/guide/{{guide._id}}/comment" id = "newcomment">
+
+            <label id = "label_writecom" for = "writecom">Leave a comment: </label>
+            <textarea id = "writecom" name = "writecom" type="text"></textarea><br>
+
+            <button id = "write" type="submit" name="write">COMMENT</button>
+            </form>
+        </div>
+	</div>
+</div>

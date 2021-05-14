@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<div id = "mainContainer">
+
+	<div id = "info">
+		<h2> GUIDES </h2>
+		<p class = "variableInfo"> 
+			Guides organized by categroy
+		</p>
+
+		<div id = "Guide_Selection">
+			<h3> Combat </h3>
+
+			<div class = "Guideline">
+				{{#each combatGuides}}
+					<div class = "guide">
+						<p> <a id = "guidename" href = "/guide/{{this._id}}"> {{this.title}} </a></p>
+						<p class = "author"> by {{this.author}} </p>
+
+						<p class = "variableInfo">{{this.tagline}}</p>
+					</div>
+				{{/each}}	
+			</div>
+		</div>
+
+		<div id = "Guide_Selection">
+			<h3> Menu </h3>
+
+			<div class = "Guideline">
+				{{#each menuGuides}}
+					<div class = "guide">
+						<p> <a id = "guidename" href = "/guide/{{this._id}}"> {{this.title}} </a></p>
+						<p class = "author"> by {{this.author}} </p>
+
+						<p class = "variableInfo">{{this.tagline}}</p>
+					</div>
+				{{/each}}	
+			</div>
+		</div>
+		<div id = "Guide_Selection">
+			<h3> General </h3>
+
+			<div class = "Guideline">
+				{{#each generalGuides}}
+					<div class = "guide">
+						<p> <a id = "guidename" href = "/guide/{{this._id}}"> {{this.title}} </a></p>
+						<p class = "author"> by {{this.author}} </p>
+
+						<p class = "variableInfo">{{this.tagline}}</p>
+					</div>
+				{{/each}}	
+			</div>
+		</div>
+		<div id = "Guide_Selection">
+			<h3> Miscellaneous </h3>
+
+			<div class = "Guideline">
+				{{#each miscGuides}}
+					<div class = "guide">
+						<p> <a id = "guidename" href = "/guide/{{this._id}}"> {{this.title}} </a></p>
+						<p class = "author"> by {{this.author}} </p>
+
+						<p class = "variableInfo">{{this.tagline}}</p>
+					</div>
+				{{/each}}	
+			</div>
+		</div>
+	</div>
+</div>

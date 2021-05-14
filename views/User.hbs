@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<div id = "mainContainer">
+
+    <div id = "user_info">
+
+        <h1 id = "account_page_header"> ACCOUNT PAGE </h1>
+
+        <div id = "information">        
+
+            <label id = "label_description" for = "userdesc">Username:</label>
+            <p id = "userdesc"> 
+                {{details.userName}}
+                {{#if details.Admin}}
+                    ★
+                {{/if}}
+            </p>
+            <br>
+
+            <label id = "label_commends" for = "usercoms">Total Commends Received:</label>
+            <p id  = "commends">{{details.comms}}</p>
+
+            <h3 id = "guidelabel">Guides Contributed:</h3>
+
+            <table id = "guides">
+                <tbody>
+                    <tr id = "titlerow">
+                        <th>Guide Name</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Date Created</th>
+                    </tr>
+                    {{#each userGuides}}
+                    <tr>
+                        <td><a href = "/guide/{{this._id}}">{{this.title}}</a></td>
+                        <td>{{this.Category}}</td>
+                        <td>{{this.tagline}}</td>
+                        <td>{{this.datePosted}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <br>
+            {{#if seshdetails.same}}
+                <p> <a href="/createguide"> Create a new guide here </a> </p>
+            {{/if}}
+        </div>
+
+        <div id = "comment_div">
+            <h2 id = "comment_header"> COMMENTS </h2>
+
+            {{#each details.Comments}}
+                <div id = "user_comment">
+                    <p id = "username"> <a href = "/finduser/{{this.author}}">{{this.author}}</a>:</p><p id = "datetime">({{this.datePosted}})</p>
+                    <div id = "content">{{this.content}}</div>
+                </div>
+            {{/each}}
+
+            {{#if seshdetails.same}}
+            {{else}}
+                <form method = "POST" action = "/user/{{details._id}}/comment" id = "newcomment">
+
+                    <label id = "label_writecom" for = "writecom">Leave a comment: </label>
+                    <textarea id = "writecom" name = "writecom" type="text"></textarea><br>
+
+                <button id = "write" type="submit" name="write">COMMENT</button>
+            {{/if}}
+        </div>
+    </div>
+</div>

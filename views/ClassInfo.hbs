@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<div id = "mainContainer">
+
+	<div id = "info">
+
+		<div id = "Class_info">
+			<h2> <img id = "classicon" src = "{{details.classicon}}" alt = "scoutic"> THE {{details.Name}}
+			<img id = "classicon" src = "{{details.classicon}}" alt = "scoutic"></h2>
+			<img src = "{{details.MainImg}}" alt = "scoutimg">
+			<br>
+			<p id = "teams">BASIC INFO</p>
+			<p>Team Uniforms</p>
+			<button onclick = "redscout()" id = "redbutton" type = "button">
+				<img src = "/assets/teamred.png"></button>
+				<br>
+			<button onclick = "bluscout()" id = "blubutton" type = "button">
+				<img src = "/assets/teamblue.png"></button>
+			<p>Emblems</p>
+			<img src = {{details.redemblem}} alt = "scoutredlogo">
+			<img src = {{details.bluemblem}} alt = "scoutblulogo">
+			<p>Health Points: {{details.HP}}
+				<p id = "hp"><img src = "/assets/overheal.png"> {{details.oHP}} (w/ Overheal)</p>
+			</p>
+			<p>Speed: {{details.SPD}}% </p>
+			<!-- add javascript to the buttons to display red and blu team models-->
+			<h3> ABOUT </h3>
+			<p> {{details.Info}} </p>
+			<h3> WEAPONS </h3>
+			<p id = "slotname">Primary Slot</p>
+				<img id = "prime" src = {{details.primImg}} alt = "scoutprim">
+				<p id = "wepname"> {{details.prim}} (Stock)</p>
+				<p id = "wepstats">
+					Ammo Loaded: {{details.AmmoLoaded}} <br>
+					Ammo Carried: {{details.TotalAmmo}} <br>
+					Base Damage: {{details.BaseDmg}} <br>
+					{{details.Extra1}}
+					<p id = "crits">Crit Damage: {{details.CritDmg}} <p></p>
+				<hr>
+
+			{{#if details.sec}}
+				<p id = "slotname">Secondary Slot</p>
+					<img id = "second" src = {{details.secImg}} alt = "scoutsec">
+					<p id = "wepname"> {{details.sec}} (Stock)</p>
+					<p id = "wepstats">
+						Ammo Loaded: {{details.SAmmoLoaded}}<br>
+						Ammo Carried: {{details.STotalAmmo}}<br>
+						Base Damage: {{details.SBaseDmg}}
+						<p id = "crits">Crit Damage: {{details.SCritDmg}}<p></p>
+						{{details.SExtra1}}
+						{{details.SExtra2}}
+						{{details.SExtra3}}
+					<hr>
+			{{/if}}
+
+			<p id = "slotname"> Melee Slot </p>
+				<img id = "mel" src = {{details.MImg}} alt = "scoutmel">
+				<p id = "wepname">{{details.Melee}} (Stock)</p>
+				<p id = "wepstats">
+					Base Damage: {{details.MBaseDmg}}
+					<p id = "crits">Crit Damage: {{details.MCritDmg}}<p></p>
+				<hr>
+
+			{{#if details.SpW}}
+				<p id = "slotname"> Special </p>
+			{{/if}}
+			
+			{{#each details.SpW}}
+				<img id = "pda" src = {{this.SpWImg}} alt = "engispec">
+				<p id = "wepname"> {{this.SpWName}} (Stock)</p>
+				<p id = "wepstats">
+					{{#each details.SpData}}
+						{{this.Data}} <br>
+					{{/each}}
+				</p>
+
+			{{/each}}
+
+			{{#if details.Special}}
+				<h3> {{details.SpName}} </h3>
+			{{/if}}
+
+			{{#each details.Special}}
+				<p id = "slotname">{{this.SpName}}</p>
+				<img id = "build" src = {{this.SpImg}} alt = "sentry">
+				<p id = "wepstats">
+					{{#each this.SpData}}
+						{{this.Data}} <br>
+					{{/each}}
+				</p>
+				<hr>
+			{{/each}}
+
+        <div id = "comment_div">
+            <h2 id = "comment_header"> COMMENTS </h2>
+
+            {{#each details.Comments}}
+            	<div id = "user_comment">
+                    <p id = "username"> <a href = "/finduser/{{this.author}}">{{this.author}}</a>:</p><p id = "datetime">({{this.datePosted}})</p>
+                    <div id = "content">{{this.content}}</div>
+                </div>
+            {{/each}}
+
+            <form method = "POST" action = "{{details.lcName}}" id = "newcomment">
+
+            <label id = "label_writecom" for = "writecom">Leave a comment: </label>
+            <textarea id = "writecom" name = "writecom" type="text"></textarea><br>
+
+            <button id = "write" type="submit" name="write">COMMENT</button>
+            </form>
+        </div>
+
+	</div>
+
+</div>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<header>
+	<input type = "checkbox" id = "nav-toggle" class = "nav-toggle">
+
+	<nav>
+
+		<h1 class="logo">
+			<img id = "newlogo" src = "/assets/newlogo.png" id = "piclogo"> 
+		</h1>
+
+		<ul>
+			<li><a href="/"> Home </a> </li>
+			<li><a> Classes </a>
+				{{#if seshdetails.class}}
+					<ul>
+						<li><a href = "scout">Scout</a></li>
+						<li><a href = "soldier">Soldier</a></li>
+						<li><a href = "pyro">Pyro</a></li>
+						<li><a href = "engineer">Engineer</a></li>
+						<li><a href = "heavy">Heavy</a></li>
+						<li><a href = "demoman">Demoman</a></li>
+						<li><a href = "sniper">Sniper</a></li>
+						<li><a href = "medic">Medic</a></li>
+						<li><a href = "spy">Spy</a></li>
+					</ul>
+				{{else}}
+					<ul>
+						<li><a href = "/class/scout">Scout</a></li>
+						<li><a href = "/class/soldier">Soldier</a></li>
+						<li><a href = "/class/pyro">Pyro</a></li>
+						<li><a href = "/class/engineer">Engineer</a></li>
+						<li><a href = "/class/heavy">Heavy</a></li>
+						<li><a href = "/class/demoman">Demoman</a></li>
+						<li><a href = "/class/sniper">Sniper</a></li>
+						<li><a href = "/class/medic">Medic</a></li>
+						<li><a href = "/class/spy">Spy</a></li>
+					</ul>
+				{{/if}}
+			</li>
+			<li><a href = "/guide"> Guides </a>
+			</li>
+			{{#if seshdetails.flag}}
+				<li> <a> {{seshdetails.name}} </a>
+					<ul>
+						<li><a href = "/user/{{seshdetails._id}}">My page</a></li>
+						<li><a href="/logout"><div class = "center">Log-out</div></a></li>
+					</ul>
+				</li>
+			{{else}}
+				<li><a> Account </a>
+					<ul>
+						<li><a href = "/Login">Log-in</a></li>
+						<li><a href = "/Signup">Register</a></li>
+					</ul>
+				</li>
+			{{/if}}
+		</ul>
+	</nav>
+</header>
